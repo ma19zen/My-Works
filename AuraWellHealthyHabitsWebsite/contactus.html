@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Make Your Life Better</title>
+    <link rel="stylesheet" href="./css/contactus.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <div class="header__logo"><h3 id="greeting"></h3></div>
+        <ul class="header__links">
+          <li class="link"><a href="./index.html">Home</a></li>
+          <li class="link"><a href="subscribe.html">Plans</a></li>
+          <li class="link"><a href="about-usercase.html">About Us</a></li>
+        </ul>
+        <a href="./subscribe.html"><button class="btn">Join Now</button></a>
+    </header>
+    <main class="container">
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have any questions or suggestions? Reach out to us using the form below or via email at <a href="mailto:info@makeyourlifebetter.com">info@makeyourlifebetter.com</a>.</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+            <div id="confirmationMessage" class="confirmation-message"></div>
+        </section>
+    </main>
+    <div class="footer__container">
+        <div class="footer__links">
+            <a href="#feedback" class="link">Feedback</a>
+            <a href="./about-usercase.html" class="link">About Us</a>
+        </div>
+        <p class="footer__text">&copy; 2024 Healthy Habits. All rights reserved.</p>
+    </div>
+</footer> 
+</body>
+    <script src="./js/contactus.js" defer></script>
+</html>

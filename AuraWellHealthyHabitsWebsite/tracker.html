@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Progress Tracker</title>
+<link rel="stylesheet" href="./css/tracker.css">
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<div class="background"></div>
+<header>
+    <div class="header__logo"><h3 id="greeting"></h3></div>
+    <ul class="header__links">
+      <li class="link"><a href="index.html">Home</a></li>
+      <li class="link"><a href="bmi.html">BMI</a></li>
+      <li class="link"><a href="subscribe.html">Plans</a></li>
+      <li class="link"><a href="contactus.html">Contact Us</a></li>
+      <li class="link"><a href="about-usercase.html">About Us</a></li>
+      <li class="link"><a href="success.html">Success Stories</a></li>
+    </ul>
+</header>
+<h2>Weight Progress Tracker</h2>
+
+<form id="weightForm">
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+    
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+    
+    <label for="height">Height (m):</label>
+    <input type="number" id="height" name="height" step="0.01" required><br><br>
+    
+    <button type="submit">Add</button>
+</form>
+
+<div id="progress">
+
+</div>
+
+<script src="./js/tracker.js"></script>
+
+</body>
+</html>

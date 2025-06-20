@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Make Your Life Better</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/pay.css">
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <div class="header__logo"><h3 id="greeting"></h3></div>
+        <ul class="header__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="subscribe.html">Plans</a></li>
+          <li class="link"><a href="tracker.html">Progress</a></li>
+          <li class="link"><a href="about-usercase.html">About Us</a></li>
+          <li class="link"><a href="ourteam.html">Our Team</a></li>
+          <li class="link"><a href="success.html">Success Stories</a></li> 
+          <li class="link"><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </header>
+    <main class="container">
+        <section class="payment-section">
+            <h2>Payment Information</h2>
+            <form class="payment-form" id="paymentForm">
+                <div class="form-group">
+                    <label for="cardName">Name on Card</label>
+                    <input type="text" id="cardName" name="cardName" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date (MM/DD/YYYY)</label>
+                    <input type="date" id="expiryDate" name="expiryDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="planSelect">Select Plan</label>
+                    <select id="planSelect" name="plan" required>
+                        <option value="">-- Select Plan --</option>
+                        <option value="./plans/basic.html">Basic Plan</option>
+                        <option value="./plans/satnderd.html">Standard Plan</option>
+                        <option value="./plans/premium.html">Premium Plan</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+                <div class="error" id="errorMessage"></div>
+            </form>
+        </section>
+    </main>
+    <script src="./js/pay.js"></script>
+</body>
+</html>

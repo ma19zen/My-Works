@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Plan Survey - Make Your Life Better</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/servey.css">
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <div class="header__logo"><h3 id="greeting"></h3></div>
+        <ul class="header__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="subscribe.html">Plans</a></li>
+          <li class="link"><a href="success.html">Success Stories</a></li> 
+          <li class="link"><a href="ourteam.html">Our Team</a></li>
+          <li class="link"><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <a href="./subscribe.html"><button class="btn">Join Now</button></a>
+    </header>
+    <main class="servey-">
+        <section id="survey" class="survey-container">
+            <h2>Personalized Plan Survey</h2>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="height">Height (in cm):</label>
+                    <input type="number" id="height" name="height" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (in kg):</label>
+                    <input type="number" id="weight" name="weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="goal">Health Goal:</label>
+                    <select id="goal" name="goal" required>
+                        <option value="" disabled selected>Select your health goal</option>
+                        <option value="weight_loss">Weight Loss</option>
+                        <option value="muscle_gain">Muscle Gain</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="overall_health">Overall Health Improvement</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="diet">Current Diet:</label>
+                    <textarea id="diet" name="diet" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exercise">Current Exercise Routine:</label>
+                    <textarea id="exercise" name="exercise" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="health_issues">Any Health Issues or Allergies:</label>
+                    <textarea id="health_issues" name="health_issues" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn-submit">
+                </div>
+            </form>
+            <div id="result" class="result-container" style="display: none;">
+                <h3>Your Submitted Information</h3>
+                <p><strong>Full Name:</strong> <span id="result-name"></span></p>
+                <p><strong>Email:</strong> <span id="result-email"></span></p>
+                <p><strong>Age:</strong> <span id="result-age"></span></p>
+                <p><strong>Gender:</strong> <span id="result-gender"></span></p>
+                <p><strong>Height:</strong> <span id="result-height"></span> cm</p>
+                <p><strong>Weight:</strong> <span id="result-weight"></span> kg</p>
+                <p><strong>Health Goal:</strong> <span id="result-goal"></span></p>
+                <p><strong>Current Diet:</strong> <span id="result-diet"></span></p>
+                <p><strong>Current Exercise Routine:</strong> <span id="result-exercise"></span></p>
+                <a href="pay.html"><button class="btn-proceed">Proceed</button></a>
+            </div>
+        </section>
+    </main>
+
+</body>
+<script src="./js/servey.js"></script>
+</html>

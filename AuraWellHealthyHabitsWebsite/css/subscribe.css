@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #28bf96;
+    --primary-color-dark: #209677;
+    --text-dark: #111827;
+    --text-light: #6b7280;
+    --white: #ffffff;
+}
+
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    margin-right: 35%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1rem;    width: 100%;
+}
+
+
+.subscription-section {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    text-align: center;
+
+}
+
+.subscription-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.subscription-plans {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.plan {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.plan h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.plan p.price {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color-dark);
+    margin: 0.5rem 0;
+}
+
+.plan .features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.plan .features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.plan .features li:last-child {
+    border-bottom: none;
+}
+
+.plan .icon {
+    margin-right: 10px;
+    color: var(--primary-color-dark);
+}
+
+.btn-subscribe {
+    display: block;
+    width: 72.5%;
+    margin: 0 auto;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: -10px;
+}
+
+.btn-subscribe:hover {
+    background-color: var(--primary-color-dark);
+    transform: scale(1.05);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Resizing</title>
+  <link rel="stylesheet" href="./front/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🖼️ Image Resizing WebSite</h1>
+
+    <div id="statusMessage"></div>
+
+    <section class="card">
+      <h2>📤 Upload New Image (.jpg)</h2>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <label for="imageFile">Select Image:</label>
+        <input type="file" id="imageFile" name="image" accept="image/jpeg" required />
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>📁 Image Gallery</h2>
+      <div class="gallery" id="imageGallery"></div>
+    </section>
+
+    <section class="card">
+      <h2>📐 Resize Selected Image</h2>
+      <form id="resizeForm">
+        <label for="widthInput">Width (px):</label>
+        <input type="number" id="widthInput" name="width" min="1" required placeholder="e.g. 300" />
+
+        <label for="heightInput">Height (px):</label>
+        <input type="number" id="heightInput" name="height" min="1" required placeholder="e.g. 200" />
+
+        <button type="submit" disabled id="resizeBtn">Resize</button>
+      </form>
+    </section>
+
+    <section class="card" id="resultSection">
+      <h2>🎯 Resized Image</h2>
+      <img id="resultImage" alt="Resized output will appear here" />
+    </section>
+  </div>
+
+
+  <script src="./front/script.js"></script>
+</body>
+</html>

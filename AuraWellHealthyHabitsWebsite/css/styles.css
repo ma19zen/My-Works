@@ -1,0 +1,329 @@
+:root {
+    --primary-color: #28bf96;
+    --primary-color-dark: #209677;
+    --text-dark: #111827;
+    --text-light: #6b7280;
+    --white: #ffffff;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+
+}
+
+ .btn {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+  
+body {
+    font-family: "Roboto", sans-serif;
+}
+  
+.container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+  
+header {
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+  
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+  
+.header__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+  
+.link a {
+    text-decoration: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.link a:hover {
+    color: var(--primary-color);
+}
+  
+@media (width < 900px) {
+      .header__links {
+        display: none;
+      }
+}
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #ffeb3b67, #ff99006a, #f4433666, #9b27b069, #2195f36b, #2d5f2f67);
+    background-size: 600% 600%;
+    animation: gradientAnimation 60s ease infinite; /* Increased duration to 60s */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    20% {
+        background-position: 100% 0%;
+    }
+    40% {
+        background-position: 100% 100%;
+    }
+    60% {
+        background-position: 0% 100%;
+    }
+    80% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    margin: 15%;
+}
+
+.card-container{
+    align-items: center;
+    margin: auto;
+    width: 95%;
+    background-color: #ffffff90;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-container h2 {
+    margin-top: 20px;
+    color: var(--primary-color);
+}
+
+.card-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 100px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item {
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.card-list .diet {
+    background-color: #F7DFF5; 
+    color: #B22485;
+}   
+.card-list .exercise {
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+.card-list .sleep {
+    background-color: #d6f8d6; 
+    color: #205c20;
+}
+.card-list .hydration {
+    background-color: #FFF9E6;
+    color: #F5B83E;
+}
+.card-list .mindfulness {
+    background-color: #EAEAEA;
+    color: #7B7B7B;
+}
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+.card-list .card-item:hover .arrow  {
+    background: #000;
+    color: #fff; 
+}
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    text-align: left;
+}
+
+.modal img {
+    width: 85%;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--primary-color-dark);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+  
+.footer__container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.footer__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+  
+.footer__links .link {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+  
+.footer__links .link:hover {
+    color: var(--primary-color);
+}
+  
+.footer__text {
+    font-size: 0.875rem;
+    color: var(--text-dark);
+}
+  

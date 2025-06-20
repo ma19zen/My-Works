@@ -1,0 +1,329 @@
+body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(24, 124, 212, 0.150) 0%,
+        rgba(77, 174, 25, 0.150) 100%
+    );
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #171a53;
+}
+
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em) {
+    h1 {
+        font-size: 7em;
+        margin: 1em 4rem 0;
+    }
+}
+
+h2 {
+    border-bottom: 3px solid #b181ff;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+main {
+    margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #171a53;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #2015ff;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+
+.page__footer {
+    background: #171a53;
+    padding: 2em;
+    color: #fff;
+}
+
+.page__footer p {
+    color: #fff;
+}
+
+
+.landing__container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em) {
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgba(189, 234, 9, 0.8);
+    background: linear-gradient(
+        0deg,
+        rgba(189, 234, 9, 0.5) 0%,
+        rgba(189, 234, 9, 1) 100%
+    );
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(101, 151, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(101, 151, 255, 0.5) 0%,
+        rgba(101, 151, 255, 1) 100%
+    );
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::after {
+    content: '';
+    background: rgb(177, 129, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(177, 129, 255, 0.5) 0%,
+        rgba(177, 129, 255, 1) 100%
+    );
+    position: absolute;
+    left: 3em;
+    bottom: -1em;
+    z-index: -5;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(32, 21, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(32, 21, 255, 0.5) 0%,
+        rgba(32, 21, 255, 1) 100%
+    );
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(10, 197, 161);
+    background: linear-gradient(
+        0deg,
+        rgba(10, 197, 161, 0.5) 0%,
+        rgba(10, 197, 161, 1) 100%
+    );
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(5n) .landing__container::after {
+    content: '';
+    background: rgb(177, 129, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(177, 129, 255, 0.5) 0%,
+        rgba(177, 129, 255, 1) 100%
+    );
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+
+section.active {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    border-radius: 10px;
+}
+
+section.active .landing__container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.active .landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translate(-1em) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    }
+}
+
+
+#commentSection {
+    padding: 20px;
+    margin: 20px auto;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.660);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #commentSection h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #commentForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  #commentForm label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+
+  #commentForm input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+
+  }
+  
+  #commentForm input[type="submit"] {
+    padding: 10px;
+    background-color: #2015ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    align-self: flex-start;
+  }
+  
+  #commentForm input[type="submit"]:hover {
+    background-color: #171a53;
+  }
+  
+  #commentsList {
+    margin-top: 20px;
+  }
+  
+  #commentsList h3 {
+    margin-bottom: 10px;
+  }
+  
+  #commentItems {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #commentItems li {
+    padding: 10px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #2015ff;
+  }

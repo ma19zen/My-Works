@@ -1,0 +1,77 @@
+@import url("home.css");
+@import url("post.css");
+@import url("post2.css");
+
+section.social-links {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.social-links h5 {
+    text-align: center;
+}
+.social-links div {
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.social-links div img {
+    height: 40px;
+    padding: 5px;
+}
+
+footer {
+    object-position: bottom;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: 78px;
+    color: #627254;
+    width: 100%;
+}
+
+.about {
+    color: #fff;
+    text-decoration: none;
+}
+.about:hover{
+    color: #627254;
+    transition: 0.5s;
+}
+
+footer {
+    object-position: bottom;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: 78px;
+    color: #627254;
+    width: 100%;
+}
+
+.about {
+    color: #fff;
+    text-decoration: none;
+}
+
+.about:hover{
+    color: #627254;
+    transition: 0.5s;
+}

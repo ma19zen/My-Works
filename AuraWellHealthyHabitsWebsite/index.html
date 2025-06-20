@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Healthy Habits</title>
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <div class="header__logo"><h3 id="greeting"></h3></div>
+        <ul class="header__links">
+          <li class="link"><a href="subscribe.html">Plans</a></li>
+          <li class="link"><a href="bmi.html">BMI</a></li>
+          <li class="link"><a href="tracker.html">Progress</a></li>
+          <li class="link"><a href="ourteam.html">Our Team</a></li>
+          <li class="link"><a href="success.html">Success Stories</a></li>
+          <li class="link"><a href="contactus.html">Contact Us</a></li>
+          <li class="link"><a href="about-usercase.html">About Us</a></li>
+
+        </ul>
+        <a href="./subscribe.html"><button class="btn">Join Now</button></a>
+    </header>
+    <br>
+    <div class="content">
+        <h1>Welcome to AuraWell</h1>
+        <p>Your way to a better life.</p>
+    </div>
+
+    <div class="card-container" id="card-container">
+        <a href="#card-container"><p>△</p></a>
+        <h2>Some Healthy Habits & It's Effect On You</h2>
+        <div class="card-list">
+            <a class="card-item" onclick="openModal('info1')">
+                <img src="./assets/diet pic.jpg" alt="Diet.PNG">
+                <span class="diet">Diet</span>
+                <h3>Eat a Balanced Diet.</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a class="card-item" onclick="openModal('info2')">
+                <img src="./assets/exercise pic.jpg" alt="exercise">
+                <span class="exercise">Exercise</span>
+                <h3>Exercise Regularly.</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a class="card-item" onclick="openModal('info3')">
+                <img src="./assets/sleep pic.jpg" alt="sleep">
+                <span class="sleep">Sleep</span>
+                <h3>Get Enough Sleep</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a class="card-item" onclick="openModal('info4')">
+                <img src="./assets/hydration pic.jpg" alt="hydration">
+                <span class="hydration">Hydration</span>
+                <h3>Stay Hydrated.</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a class="card-item" onclick="openModal('info5')">
+                <img src="./assets/mindfulness pic.jpg" alt="mindfulness">
+                <span class="mindfulness">Mindfulness</span>
+                <h3>Practice Mindfulness.</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a class="card-item" onclick="openModal('info6')">
+                <img src="./assets/screen time pic.jpg" alt="Screen Time">
+                <span class="screen-time">Screen Time</span>
+                <h3>Manage Your Screen Time.</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+    <br>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <div class="footer__container">
+            <div class="footer__links">
+                <a href="./contactus.html" class="link">Contact Us</a>
+                <a href="#feedback" class="link">Feedback</a>
+                <a href="about-usercase.html" class="link">About Us</a>
+            </div>
+            <p class="footer__text">&copy; 2024 Healthy Habits. All rights reserved.</p>
+        </div>
+    </footer>  
+    <script src="./js/app.js"></script>
+</body>
+</html>

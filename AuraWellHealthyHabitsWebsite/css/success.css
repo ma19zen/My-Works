@@ -1,0 +1,56 @@
+:root {
+    --primary-color: #28bf96;
+    --primary-color-dark: #209677;
+    --text-dark: #111827;
+    --text-light: #6b7280;
+    --white: #ffffff;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-left: 30%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.success-stories {
+    padding: 20px;
+}
+
+.success-stories h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.story {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.story img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.story-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.story-content p {
+    margin: 5px 0 0;
+    color: #666;
+}
