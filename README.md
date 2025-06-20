@@ -1,4 +1,4 @@
-# Mazen's Web Works 🚀
+# My Web Works 🚀
 
 A collection of my frontend and full-stack practice projects.
 
