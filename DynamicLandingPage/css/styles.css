@@ -47,6 +47,53 @@ section {
     min-height: 80vh;
 }
 
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar__brand {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #171a53;
+}
+
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.navbar__toggle span {
+    width: 25px;
+    height: 3px;
+    background: #171a53;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.navbar__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 .navbar__menu ul {
     padding-left: 0;
@@ -64,6 +111,7 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #171a53;
+    transition: ease 0.3s all;
 }
 
 .navbar__menu .menu__link:hover {
@@ -72,15 +120,61 @@ section {
     transition: ease 0.3s all;
 }
 
-
-.page__header {
-    background: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .navbar__toggle {
+        display: flex;
+    }
+    
+    .navbar__list {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    
+    .navbar__list.active {
+        left: 0;
+    }
+    
+    .navbar__menu li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+    
+    .navbar__menu .menu__link {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .navbar__menu .menu__link:hover {
+        background: #f8f9fa;
+        color: #171a53;
+    }
+    
+    /* Hamburger Animation */
+    .navbar__toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .navbar__toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar__toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
-
 
 .page__footer {
     background: #171a53;
@@ -91,7 +185,6 @@ section {
 .page__footer p {
     color: #fff;
 }
-
 
 .landing__container {
     padding: 1em;
@@ -110,7 +203,6 @@ section:nth-of-type(even) .landing__container {
     margin-left: auto;
     text-align: right;
 }
-
 
 section:nth-of-type(odd) .landing__container::before {
     content: '';
@@ -224,7 +316,6 @@ section:nth-of-type(5n) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-
 section.active {
     background: rgb(0, 0, 0);
     background: linear-gradient(
@@ -245,8 +336,6 @@ section.active .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
-
-
 @keyframes rotate {
     from {
         transform: rotate(0deg) translate(-1em) rotate(0deg);
@@ -255,7 +344,6 @@ section.active .landing__container::after {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
 }
-
 
 #commentSection {
     padding: 20px;

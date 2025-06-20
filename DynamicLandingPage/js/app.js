@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
+    const navbarToggle = document.getElementById('navbar__toggle');
+    const navbarList = document.getElementById('navbar__list');
 
-//the navigation menu
     sections.forEach(section => {
       const navList = document.getElementById('navbar__list');
       const navItem = document.createElement('li');
@@ -12,8 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
       navItem.appendChild(navLink);
       navList.appendChild(navItem);
     });
+
+    navbarToggle.addEventListener('click', function() {
+        navbarList.classList.toggle('active');
+        navbarToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.menu__link').forEach(link => {
+        link.addEventListener('click', function() {
+            navbarList.classList.remove('active');
+            navbarToggle.classList.remove('active');
+        });
+    });
   
-//smooth scrolling
     document.querySelectorAll('.menu__link').forEach(link => {
       link.addEventListener('click', function(event) {
         event.preventDefault();
@@ -25,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-//active state in the section and nav link
 window.addEventListener('scroll', function() {
     let currentSection;
     sections.forEach(section => {
