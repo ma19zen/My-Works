@@ -1,95 +1,106 @@
-# Welcome to the One and only UdaciRacer Simulation Game
+# 🏎️ UdaciRacer Simulation Game
 
-## Project Introduction
+Welcome to the one and only **UdaciRacer Sim Game** — a fun car racing simulation built with Node.js (frontend) and Go (backend API).
 
-Here is a partially built-out game that races cars—your job is to complete it! Throughout the game logic, you will find _"TODO"_ comments that must be completed in order for the game to work. You are going to use the asynchronous skills you gained in the course to fill in the blanks in this game.
+---
 
-The game mechanics are this: the player selects a racer and track from dropdown menus and starts the game. Once the race begins, you accelerate a racer by clicking an acceleration button. The other racers are pre-programmed to accelerate and so the racers progress along the track and a leaderboard live-updates as players change position. The final view is a results page displaying the players' rankings.
+## 🚀 Project Overview
 
-The game has three main views:
+This project is part of a learning exercise to practice working with asynchronous JavaScript, DOM manipulation, and API communication.
 
-1. The form to create a race
+🛠️ **Important Note:**  
+I did not build this entire project from scratch. The **backend server (Go)** and most of the **frontend HTML/CSS** were already provided as starter code.  
+**My main task was to complete the JavaScript logic in the file:**
 
-2. The race progress view (this includes the live-updating leaderboard and acceleration button)
+```
+src/client/assets/javascript/index.js
+```
 
-3. The race results view
+I followed the `// TODO` comments in that file to finish the game's functionality (API calls, event handling, race flow, etc.).
 
-## Starter Code
+---
 
-We have supplied you with the following:
+## 🎮 Game Features
 
-1. An API. The API is entirely written for you and you do not have to open the folder at all as a part of this project. This server is written in Go and is where the logic lives that controls the racers and tracks. All you have to do is run a terminal command to start the server and then send requests to it as you run the project.
+1. **Race Setup Screen** — Pick your racer and track.
+2. **Race Progress Screen** — Start the race, accelerate, and watch the real-time leaderboard.
+3. **Race Results Screen** — See who finishes first after the race ends.
 
-2. HTML Views. The focus of this course is not UI development or styling practice, so we have already provided you with chunks of the UI, all you have to do is call them (render them to the view) at the right times. That said, if you want to add some color, images, and other snazziness to your project, go right ahead!
+---
 
-## Getting Started
+## ⚙️ How to Run the Project
 
-In order to build this game, we need to run two things: the game engine API and the front end.
+### 1. Run the Backend (Go API Server):
 
-### Start the Server
+✔️ Open terminal:
 
-To start the server, open a terminal and go to the api folder: `$ cd api`
-Compile the Go code with: `$ go build`
-Then start the server: `$ go run .`
+```bash
+cd api
+go build
+go run .
+```
 
-You should see the server start and run on port 3001. After this point, you don't have to touch the API again!
+✅ Server runs at: [http://localhost:3001](http://localhost:3001)  
+Leave this terminal running.
 
-### Start the Frontend
+---
 
-First, run your preference of `npm install && npm start` at the root of this project. When you see the notification come up you can click 'Open browser', or, you can go to the PORTS tab of your terminal window, right click on port 3002, and select the first option `Open in browser`. When you make code changes in the code, just refresh the browser tab to see the changes. 
+### 2. Run the Frontend (Node/Yarn Server):
 
-TIP: You might find it easier to break off the project browser tab and keep the code and the project in two seprate windows, so that you can full screen the code. 
+✔️ Open a new terminal:
 
-## Project Requirements
+```bash
+npm install
+npm start
+```
 
-This starter code base has directions for you in `src/client/assets/javascript/index.js`. There you will be directed to use certain asynchronous methods to achieve tasks. You will know you're making progress as you can play through more and more of the game.
+✅ Frontend runs at: [http://localhost:3002](http://localhost:3002)
 
-### API Calls
+---
 
-To complete the project you must first create the calls to the API. These will all be fetch requests, and all information needed to create the request is provided in the instructions. The API calls are all at the bottom of the file: `src/client/assets/javascript/index.js`.
+## 🔗 API Endpoints Used:
 
-Below are a list of the API endpoints and the shape of the data they return. These are all of the endpoints you need to complete the game. Consult this information often as you complete the project:
+| Method | Endpoint                     | Description                      |
+|--------|-----------------------------|----------------------------------|
+| GET    | /api/tracks                 | List all tracks                  |
+| GET    | /api/cars                   | List all racers (cars)           |
+| POST   | /api/races                  | Create a new race                |
+| POST   | /api/races/{id}/start        | Start the created race           |
+| POST   | /api/races/{id}/accelerate   | Accelerate player’s car          |
+| GET    | /api/races/{id}             | Get race status and positions    |
 
-[GET] `api/tracks`
-List of all tracks
+---
 
-- id: number (1)
-- name: string ("Track 1")
-- segments: number[]([87,47,29,31,78,25,80,76,60,14....])
+## 📝 What I Edited:
 
-[GET] `api/cars`
-List of all cars
+✔️ Completed all required `// TODO` parts in:  
 
-- id: number (3)
-- driver_name: string ("Racer 1")
-- top_speed: number (500)
-- acceleration: number (10)
-- handling: number (10)
+```
+src/client/assets/javascript/index.js
+```
 
-[GET] `api/races/${id}`
-Information about a single race
+✔️ Implemented API fetch requests, race handling, DOM updates.
 
-- status: RaceStatus ("unstarted" | "in-progress" | "finished")
-- positions object[] ([{ car: object, final_position: number (omitted if empty), speed: number, segment: number}])
+❌ Did **NOT** modify:
 
-[POST] `api/races`
-Create a race
+- Backend Go API files in `/api`
+- HTML & CSS files for styling/layout (unless minor adjustments).
 
-- id: number
-- track: string
-- player_id: number
-- cars: Cars[] (array of cars in the race)
-- results: Cars[] (array of cars in the position they finished, available if the race is finished)
+---
 
-[POST] `api/races/${id}/start`
-Begin a race
+## ❗ Notes:
 
-- Returns nothing
+- Backend must be running first before starting the frontend.
+- Refresh the browser to see JS changes.
+- Race logic, leaderboard updates, and user interactions are fully functional as required.
 
-[POST] `api/races/${id}/accelerate`
-Accelerate a car
+---
 
-- Returns nothing
+## ✅ Summary:
 
-To complete the race logic, find all the TODO tags in index.js and read the instructions.
+> Backend: run `go run .` in `/api`  
+> Frontend: run `npm start` in root folder  
+> Open [http://localhost:3002](http://localhost:3002) — and enjoy racing! 🏁
 
+---
+```
